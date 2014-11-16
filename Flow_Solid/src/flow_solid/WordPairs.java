@@ -11,17 +11,18 @@ package flow_solid;
  * @author Armandi
  */
 public class WordPairs {
-    private String danish;
-    private String english;
     
-public WordPairs(String danish, String english){
+    private String danish;
+    private String polish;
+    
+public WordPairs(String danish, String polish){
     this.danish = danish;
-    this.english = english;
+    this.polish = polish;
     
 }
     @Override
     public String toString() {
-        return danish + "," + english;
+        return danish + "," + polish;
     }
 
     public String getDanish() {
@@ -32,11 +33,11 @@ public WordPairs(String danish, String english){
         this.danish = danish;
     }
 
-    public String getEnglish() {
-        return english;
+    public String getPolish() {
+        return polish;
     }
 
-    public void setEnglish(String english) {
-        this.english = english;
+    public void setPolish(String polish) {
+        this.polish = polish;
     }
 }

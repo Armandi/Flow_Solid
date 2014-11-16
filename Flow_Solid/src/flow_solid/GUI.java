@@ -15,8 +15,19 @@ public class GUI extends javax.swing.JFrame {
     /**
      * Creates new form GUI
      */
+    
+    WordPairControlInterface controller;
+    
+    
     public GUI() {
         initComponents();
+        controller = new Control();
+        controller.load("savedFile.txt");
+        
+        
+        
+        
+        danishTF.setText(controller.getRandomQuestion());
     }
 
     /**
@@ -33,7 +44,7 @@ public class GUI extends javax.swing.JFrame {
         addWord = new javax.swing.JButton();
         lookUp = new javax.swing.JButton();
         danishTF = new javax.swing.JTextField();
-        englishTF = new javax.swing.JTextField();
+        polishTF = new javax.swing.JTextField();
         Feedback = new javax.swing.JTextField();
         DanishLabel = new javax.swing.JLabel();
         Headline = new javax.swing.JLabel();
@@ -42,6 +53,11 @@ public class GUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         makeGuss.setText("Make guss");
+        makeGuss.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                makeGussActionPerformed(evt);
+            }
+        });
 
         nextWord.setText("Next word");
 
@@ -49,9 +65,19 @@ public class GUI extends javax.swing.JFrame {
 
         lookUp.setText("Look Up");
 
-        danishTF.setText("Bil");
+        danishTF.setText("hus");
+        danishTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                danishTFActionPerformed(evt);
+            }
+        });
 
-        englishTF.setText("Car");
+        polishTF.setText("dom");
+        polishTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                polishTFActionPerformed(evt);
+            }
+        });
 
         Feedback.setEditable(false);
         Feedback.setText("Correct!");
@@ -61,7 +87,7 @@ public class GUI extends javax.swing.JFrame {
         Headline.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Headline.setText("What's the english word ?");
 
-        EnglishLable.setText("English word:");
+        EnglishLable.setText("Polish word:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,9 +104,9 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(makeGuss)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                                 .addComponent(nextWord))
-                            .addComponent(englishTF)
+                            .addComponent(polishTF)
                             .addComponent(danishTF))
                         .addGap(66, 66, 66))
                     .addGroup(layout.createSequentialGroup()
@@ -106,7 +132,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(danishTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(englishTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(polishTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(EnglishLable))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -123,6 +149,28 @@ public class GUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void polishTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_polishTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_polishTFActionPerformed
+
+    private void danishTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_danishTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_danishTFActionPerformed
+
+    private void makeGussActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_makeGussActionPerformed
+
+if (controller.checkGuess(danishTF.getText(), polishTF.getText())) {
+            Feedback.setText("That's correct!");
+           
+            danishTF.setText(controller.getRandomQuestion());
+            polishTF.setText("");
+        } else {
+            Feedback.setText("Wrong, try again!");
+        }
+
+
+    }//GEN-LAST:event_makeGussActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,9 +214,9 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel Headline;
     private javax.swing.JButton addWord;
     private javax.swing.JTextField danishTF;
-    private javax.swing.JTextField englishTF;
     private javax.swing.JButton lookUp;
     private javax.swing.JButton makeGuss;
     private javax.swing.JButton nextWord;
+    private javax.swing.JTextField polishTF;
     // End of variables declaration//GEN-END:variables
 }

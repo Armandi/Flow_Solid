@@ -34,9 +34,9 @@ public class FileHandler {
             //System.out.println(tokens[0]);
             //Parsing the data to int's. Then adding them to the ArrayList created in the beginning.
             String danish = tokens[0].trim();
-            String english = tokens[1].trim();
+            String polish = tokens[1].trim();
             
-            WordPairs w = new WordPairs(danish, english);
+            WordPairs w = new WordPairs(danish, polish);
             //Now add the data to the ArrayList we created in the beginning.
             words.add(w);
         }
@@ -53,7 +53,7 @@ public class FileHandler {
         try {
     fw = new FileWriter("Word.txt");
             for (WordPairs w : words) {
-                fw.append(w.getDanish()+","+w.getEnglish());
+                fw.append(w.getDanish()+","+w.getPolish());
                 fw.append("\n");
             }
             fw.close();

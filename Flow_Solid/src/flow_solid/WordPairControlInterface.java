@@ -9,7 +9,7 @@ package flow_solid;
 public interface WordPairControlInterface
 {
     
-/**
+    /**
      * Pre: Post: A new word pair is added to the existing collection of word
      * pairs. This method does not save to file!
      */
