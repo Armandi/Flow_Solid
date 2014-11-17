@@ -71,7 +71,7 @@ public class GUI extends javax.swing.JFrame {
 
         addWord.setText("Add new word");
 
-        lookUp.setText("Look Up");
+        lookUp.setText("Look word Up");
         lookUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lookUpActionPerformed(evt);
@@ -125,9 +125,9 @@ public class GUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Feedback)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(addWord)
+                                .addComponent(lookUp)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lookUp)))
+                                .addComponent(addWord)))
                         .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -152,11 +152,11 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(makeGuss))
                 .addGap(17, 17, 17)
                 .addComponent(Feedback, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addWord)
-                    .addComponent(lookUp))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lookUp)
+                    .addComponent(addWord))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();

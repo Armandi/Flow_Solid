@@ -3,12 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Admin/Documents/GitHub/Flow_Solid/Flow_Solid/src/flow_solid/GUI.java</file>
-            <file>file:/C:/Users/Admin/Documents/GitHub/Flow_Solid/Flow_Solid/src/flow_solid/FileHandler.java</file>
-            <file>file:/C:/Users/Admin/Documents/GitHub/Flow_Solid/Flow_Solid/src/flow_solid/Control.java</file>
-            <file>file:/C:/Users/Admin/Documents/GitHub/Flow_Solid/Flow_Solid/src/flow_solid/WordPairs.java</file>
-            <file>file:/C:/Users/Admin/Documents/GitHub/Flow_Solid/Flow_Solid/src/flow_solid/WordPairControlInterface.java</file>
-            <file>file:/C:/Users/Admin/Documents/GitHub/Flow_Solid/Flow_Solid/savedFile.txt</file>
+            <file>file:/C:/Users/Jonas/Documents/GitHub/Flow_Solid/Flow_Solid/src/controller/FileHandler.java</file>
+            <file>file:/C:/Users/Jonas/Documents/GitHub/Flow_Solid/Flow_Solid/savedFile.txt</file>
+            <file>file:/C:/Users/Jonas/Documents/GitHub/Flow_Solid/Flow_Solid/src/controller/Control.java</file>
+            <file>file:/C:/Users/Jonas/Documents/GitHub/Flow_Solid/Flow_Solid/src/view/GUI.java</file>
+            <file>file:/C:/Users/Jonas/Documents/GitHub/Flow_Solid/Flow_Solid/src/interfaces/WordPairControlInterface.java</file>
+            <file>file:/C:/Users/Jonas/Documents/GitHub/Flow_Solid/Flow_Solid/src/model/WordPairs.java</file>
         </group>
     </open-files>
 </project-private>
