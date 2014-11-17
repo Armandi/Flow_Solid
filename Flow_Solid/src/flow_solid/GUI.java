@@ -60,6 +60,11 @@ public class GUI extends javax.swing.JFrame {
         });
 
         nextWord.setText("Next word");
+        nextWord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextWordActionPerformed(evt);
+            }
+        });
 
         addWord.setText("Add new word");
 
@@ -72,7 +77,6 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        polishTF.setText("dom");
         polishTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 polishTFActionPerformed(evt);
@@ -171,6 +175,10 @@ if (controller.checkGuess(danishTF.getText(), polishTF.getText())) {
 
 
     }//GEN-LAST:event_makeGussActionPerformed
+
+    private void nextWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextWordActionPerformed
+    danishTF.setText(controller.getRandomQuestion());
+    }//GEN-LAST:event_nextWordActionPerformed
 
     /**
      * @param args the command line arguments

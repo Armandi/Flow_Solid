@@ -107,6 +107,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Next word"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nextWordActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="addWord">
       <Properties>
@@ -127,9 +130,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="polishTF">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="dom"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="polishTFActionPerformed"/>
       </Events>
