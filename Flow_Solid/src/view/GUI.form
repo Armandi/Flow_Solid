@@ -120,6 +120,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Look Up"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lookUpActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="danishTF">
       <Properties>
