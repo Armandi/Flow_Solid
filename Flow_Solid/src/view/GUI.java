@@ -192,7 +192,10 @@ if (controller.checkGuess(danishTF.getText(), polishTF.getText())) {
 
     private void lookUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lookUpActionPerformed
 
+<<<<<<< HEAD
      
+=======
+>>>>>>> origin/master
     }//GEN-LAST:event_lookUpActionPerformed
 
     /**
