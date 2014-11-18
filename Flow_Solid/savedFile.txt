@@ -1,3 +1,7 @@
-hest,horse
-hus,house
-bord,table
+hus, dom
+hund, pies
+mor, mama
+vindue, okno
+computer, komputer
+mus, mysz
+vand, woda
