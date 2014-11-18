@@ -23,7 +23,7 @@ public class FileHandler {
         //We'll make a scanner to the text file. We set the scanner to read from file source.
         Scanner scan = null;
         try {
-        scan = new Scanner(new File("Word.txt"));  
+        scan = new Scanner(new File("savedFile.txt"));  
         } catch (Exception e) {
             e.printStackTrace();
         }

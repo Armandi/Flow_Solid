@@ -81,8 +81,8 @@ public class Control implements WordPairControlInterface {
      */
     @Override
     public String lookup(String question) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     
+        return words.get(currentQuestion).getPolish();
     }
 
     /**
@@ -121,7 +121,6 @@ public class Control implements WordPairControlInterface {
      */
     @Override
     public void clear() {
-        
         words.clear();
     }
 
