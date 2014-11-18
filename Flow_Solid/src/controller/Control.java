@@ -9,6 +9,7 @@ package controller;
 import interfaces.WordPairControlInterface;
 import model.WordPairs;
 import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -23,6 +24,7 @@ public class Control implements WordPairControlInterface {
      private int currentQuestion;
      
      Random rn = new Random();
+     FileHandler fh = new FileHandler();
      
     /**
      * Pre: Post: A new word pair is added to the existing collection of word
@@ -81,8 +83,12 @@ public class Control implements WordPairControlInterface {
      */
     @Override
     public String lookup(String question) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    
+        for (WordPairs wordPairs : words) {
+            if( wordPairs.getDanish().equals(question) ){
+                return wordPairs.getPolish();
+            }
+        }
+        return null;
     }
 
     /**
@@ -92,19 +98,7 @@ public class Control implements WordPairControlInterface {
      */
     @Override
     public boolean load(String filename) {
-    
-        try {
-            File file = new File(filename);
-            Scanner scan = new Scanner(file);
-            while(scan.hasNext()) {
-                words.add(new WordPairs((scan.next().replace(",", "")),scan.next()));
-            }
-        System.out.println(words);
-        return true;
-        
-        }catch (Exception e) {
-            return false;
-        }
+          return fh.readFile(filename, words);
     }
 
     /**
@@ -113,7 +107,9 @@ public class Control implements WordPairControlInterface {
      */
     @Override
     public boolean save(String filename) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+    
+        return fh.writeToFile(filename, words);
     }
 
     /**
