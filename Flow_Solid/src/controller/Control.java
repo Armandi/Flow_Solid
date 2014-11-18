@@ -81,6 +81,7 @@ public class Control implements WordPairControlInterface {
      */
     @Override
     public String lookup(String question) {
+        
         for (WordPairs wordPairs : words) {
             if( wordPairs.getDanish().equals(question) ){
                 return wordPairs.getPolish();
