@@ -191,7 +191,8 @@ if (controller.checkGuess(danishTF.getText(), polishTF.getText())) {
     }//GEN-LAST:event_nextWordActionPerformed
 
     private void lookUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lookUpActionPerformed
-        // TODO add your handling code here:
+
+     
     }//GEN-LAST:event_lookUpActionPerformed
 
     /**
