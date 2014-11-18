@@ -191,15 +191,7 @@ if (controller.checkGuess(danishTF.getText(), polishTF.getText())) {
     }//GEN-LAST:event_nextWordActionPerformed
 
     private void lookUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lookUpActionPerformed
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-     
-=======
->>>>>>> origin/master
-=======
         // TODO add your handling code here:
->>>>>>> parent of 1631628... THE 100% Test done
     }//GEN-LAST:event_lookUpActionPerformed
 
     /**

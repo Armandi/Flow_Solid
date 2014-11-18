@@ -23,15 +23,9 @@ public class FileHandler {
         //We'll make a scanner to the text file. We set the scanner to read from file source.
         Scanner scan = null;
         try {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         scan = new Scanner(new File("savedFile.txt"));  
-=======
-        scan = new Scanner(new File(filename));  
->>>>>>> origin/master
-=======
-        scan = new Scanner(new File("Word.txt"));  
->>>>>>> parent of 1631628... THE 100% Test done
+
         } catch (Exception e) {
             e.printStackTrace();
         }
