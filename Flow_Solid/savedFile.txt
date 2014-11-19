@@ -1,7 +1,10 @@
-hus, dom
-hund, pies
-mor, mama
-vindue, okno
-computer, komputer
-mus, mysz
-vand, woda
+hus,dom
+hund,pies
+mor,mama
+vindue,okno
+computer,komputer
+mus,mysz
+vand,woda
+kat,kot
+hund,pies
+spil,gra

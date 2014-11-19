@@ -26,7 +26,7 @@ public class GUI extends javax.swing.JFrame {
         initComponents();
         controller = new Control();
         controller.load("savedFile.txt");
-        
+        Feedback.setText("Welcome to the amazing Danish-Polish dictionary!");
         
         
         
@@ -42,6 +42,7 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         makeGuss = new javax.swing.JButton();
         nextWord = new javax.swing.JButton();
         addWord = new javax.swing.JButton();
@@ -52,6 +53,8 @@ public class GUI extends javax.swing.JFrame {
         DanishLabel = new javax.swing.JLabel();
         Headline = new javax.swing.JLabel();
         EnglishLable = new javax.swing.JLabel();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,6 +73,11 @@ public class GUI extends javax.swing.JFrame {
         });
 
         addWord.setText("Add new word");
+        addWord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addWordActionPerformed(evt);
+            }
+        });
 
         lookUp.setText("Look word Up");
         lookUp.addActionListener(new java.awt.event.ActionListener() {
@@ -78,7 +86,6 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        danishTF.setEditable(false);
         danishTF.setText("hus");
         danishTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +100,11 @@ public class GUI extends javax.swing.JFrame {
         });
 
         Feedback.setEditable(false);
-        Feedback.setText("Correct!");
+        Feedback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FeedbackActionPerformed(evt);
+            }
+        });
 
         DanishLabel.setText("Danish word:");
 
@@ -188,11 +199,34 @@ if (controller.checkGuess(danishTF.getText(), polishTF.getText())) {
     private void nextWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextWordActionPerformed
     danishTF.setText(controller.getRandomQuestion());
     polishTF.setText("");
+    Feedback.setText("Think twice!");
     }//GEN-LAST:event_nextWordActionPerformed
 
     private void lookUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lookUpActionPerformed
 
+        //controller.lookup(polishTF.getText());
+        //polishTF.setText(controller.lookup());
+        
+        
     }//GEN-LAST:event_lookUpActionPerformed
+
+    private void addWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addWordActionPerformed
+       
+      controller.add(danishTF.getText(),polishTF.getText());
+      
+      if(danishTF.equals(null) || polishTF.equals(null))
+      {
+          Feedback.setText("You have to write some words! Try again");
+      }else{
+      controller.save("savedFile.txt");
+      Feedback.setText("Saved new couple of words! ");
+      }
+      
+    }//GEN-LAST:event_addWordActionPerformed
+
+    private void FeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FeedbackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FeedbackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -236,6 +270,7 @@ if (controller.checkGuess(danishTF.getText(), polishTF.getText())) {
     private javax.swing.JLabel Headline;
     private javax.swing.JButton addWord;
     private javax.swing.JTextField danishTF;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton lookUp;
     private javax.swing.JButton makeGuss;
     private javax.swing.JButton nextWord;
