@@ -2,11 +2,11 @@ package controller;
 
 import interfaces.WordPairControlInterface;
 import model.WordPairs;
-import java.io.File;
-import java.io.FileWriter;
+//import java.io.File;
+//import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 //@author Armandi & Lukasz
 
