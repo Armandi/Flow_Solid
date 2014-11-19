@@ -7,4 +7,3 @@ mus,mysz
 vand,woda
 kat,kot
 hund,pies
-spil,gra
