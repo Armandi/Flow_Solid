@@ -39,7 +39,7 @@ public class FileHandler {
             String danish = tokens[0].trim();
             String polish = tokens[1].trim();
             WordPairs wp = new WordPairs(danish, polish);
-            listWords.add( wp  );
+            listWords.add(wp);
         }
         
         return true;
