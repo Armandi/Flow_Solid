@@ -57,6 +57,7 @@ public class GUI extends javax.swing.JFrame {
         jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         makeGuss.setText("Make guss");
         makeGuss.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +110,7 @@ public class GUI extends javax.swing.JFrame {
         DanishLabel.setText("Danish word:");
 
         Headline.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        Headline.setText("What's the english word ?");
+        Headline.setText("What's the polish word ?");
 
         EnglishLable.setText("Polish word:");
 
@@ -172,6 +173,7 @@ public class GUI extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void polishTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_polishTFActionPerformed
