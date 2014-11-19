@@ -11,7 +11,7 @@ import model.WordPairs;
 public class FileHandler {
 
 //method which can read the text file.
-    public boolean readFile(String filename, ArrayList<WordPairs> listWords) {
+    public boolean readFile(String filename, ArrayList<WordPairs> listWords,ArrayList<Integer> prob) {
 
         Scanner scan = null;
         try {
@@ -22,12 +22,15 @@ public class FileHandler {
             return false;
         }
         while (scan.hasNext()) {
+            
             String str = scan.nextLine();
             String[] tokens = str.split(",");
             String danish = tokens[0].trim();
             String polish = tokens[1].trim();
             WordPairs wp = new WordPairs(danish, polish);
+            prob.add(5);
             listWords.add(wp);
+            
         }
         return true;
     }
