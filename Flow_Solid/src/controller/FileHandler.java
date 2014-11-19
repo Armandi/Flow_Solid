@@ -12,8 +12,8 @@ import model.WordPairs;
  * @author Armandi
  */
 public class FileHandler {
-    //Firstly we will make an ArrayList for the text file.
-    ArrayList<WordPairs> words = new ArrayList();
+   
+  
     
     /*
     We will make a method which can read the text file.
@@ -23,7 +23,6 @@ public class FileHandler {
         //We'll make a scanner to the text file. We set the scanner to read from file source.
         Scanner scan = null;
         try {
-
         scan = new Scanner(new File(filename));  
         } catch (Exception e) {
             
@@ -32,15 +31,18 @@ public class FileHandler {
         }
         while(scan.hasNext()){
             String str = scan.nextLine();
-            String[]tokens = str.split(",");
+            //System.out.println(str);
+            //just checking if it reads the file.
+            String[] tokens = str.split(",");
+            //System.out.println(tokens[0]);
             //Parsing the data to int's. Then adding them to the ArrayList created in the beginning.
             String danish = tokens[0].trim();
             String polish = tokens[1].trim();
             WordPairs wp = new WordPairs(danish, polish);
-            listWords.add(wp);
+            listWords.add( wp  );
         }
         
-           return true;
+        return true;
     }
     
     /*
@@ -50,7 +52,7 @@ public class FileHandler {
     
     FileWriter fw;
         try {
-        fw = new FileWriter(filename);
+    fw = new FileWriter(filename);
             for (WordPairs w : listWords) {
                 fw.append(w.getDanish()+","+w.getPolish());
                 fw.append("\n");
@@ -63,7 +65,6 @@ public class FileHandler {
         return true;
     }
 }
-
     
     
 

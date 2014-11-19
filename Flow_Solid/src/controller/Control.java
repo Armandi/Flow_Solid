@@ -8,8 +8,11 @@ package controller;
 
 import interfaces.WordPairControlInterface;
 import model.WordPairs;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -95,7 +98,7 @@ public class Control implements WordPairControlInterface {
      */
     @Override
     public boolean load(String filename) {
-        return fh.readFile(filename, words);
+          return fh.readFile(filename, words);
     }
 
     /**
@@ -104,6 +107,8 @@ public class Control implements WordPairControlInterface {
      */
     @Override
     public boolean save(String filename) {
+        
+    
         return fh.writeToFile(filename, words);
     }
 
@@ -112,6 +117,7 @@ public class Control implements WordPairControlInterface {
      */
     @Override
     public void clear() {
+        
         words.clear();
     }
 
