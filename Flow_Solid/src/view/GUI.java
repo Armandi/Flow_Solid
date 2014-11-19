@@ -204,7 +204,9 @@ if (controller.checkGuess(danishTF.getText(), polishTF.getText())) {
 
     private void lookUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lookUpActionPerformed
 
-        //controller.lookup(polishTF.getText());
+        
+        polishTF.setText( controller.lookup(danishTF.getText()));
+        Feedback.setText("Well, what do you know! ;) ");
         //polishTF.setText(controller.lookup());
         
         
@@ -214,7 +216,7 @@ if (controller.checkGuess(danishTF.getText(), polishTF.getText())) {
        
       controller.add(danishTF.getText(),polishTF.getText());
       
-      if(danishTF.equals(null) || polishTF.equals(null))
+      if(danishTF.getText().equals("") || polishTF.getText().equals(""))
       {
           Feedback.setText("You have to write some words! Try again");
       }else{
