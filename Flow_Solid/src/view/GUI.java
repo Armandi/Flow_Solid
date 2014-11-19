@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package view;
 
 import controller.Control;
@@ -18,18 +17,13 @@ public class GUI extends javax.swing.JFrame {
     /**
      * Creates new form GUI
      */
-    
     WordPairControlInterface controller;
-    
-    
+
     public GUI() {
         initComponents();
         controller = new Control();
         controller.load("savedFile.txt");
         Feedback.setText("Welcome to the amazing Danish-Polish dictionary!");
-        
-        
-        
         danishTF.setText(controller.getRandomQuestion());
     }
 
@@ -185,47 +179,34 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_danishTFActionPerformed
 
     private void makeGussActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_makeGussActionPerformed
-
-if (controller.checkGuess(danishTF.getText(), polishTF.getText())) {
+       if (controller.checkGuess(danishTF.getText(), polishTF.getText())) {
             Feedback.setText("That's correct!");
-           
             danishTF.setText(controller.getRandomQuestion());
             polishTF.setText("");
         } else {
             Feedback.setText("Wrong, try again!");
         }
-
-
     }//GEN-LAST:event_makeGussActionPerformed
 
     private void nextWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextWordActionPerformed
-    danishTF.setText(controller.getRandomQuestion());
-    polishTF.setText("");
-    Feedback.setText("Think twice!");
+        danishTF.setText(controller.getRandomQuestion());
+        polishTF.setText("");
+        Feedback.setText("Think twice!");
     }//GEN-LAST:event_nextWordActionPerformed
 
     private void lookUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lookUpActionPerformed
-
-        
-        polishTF.setText( controller.lookup(danishTF.getText()));
+        polishTF.setText(controller.lookup(danishTF.getText()));
         Feedback.setText("Well, what do you know! ;) ");
-        //polishTF.setText(controller.lookup());
-        
-        
     }//GEN-LAST:event_lookUpActionPerformed
 
     private void addWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addWordActionPerformed
-       
-      controller.add(danishTF.getText(),polishTF.getText());
-      
-      if(danishTF.getText().equals("") || polishTF.getText().equals(""))
-      {
-          Feedback.setText("You have to write some words! Try again");
-      }else{
-      controller.save("savedFile.txt");
-      Feedback.setText("Saved new couple of words! ");
-      }
-      
+        controller.add(danishTF.getText(), polishTF.getText());
+        if (danishTF.getText().equals("") || polishTF.getText().equals("")) {
+            Feedback.setText("You have to write some words! Try again");
+        } else {
+            controller.save("savedFile.txt");
+            Feedback.setText("Saved new couple of words! ");
+        }
     }//GEN-LAST:event_addWordActionPerformed
 
     private void FeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FeedbackActionPerformed
