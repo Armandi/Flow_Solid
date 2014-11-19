@@ -1,14 +1,9 @@
 package interfaces;
 
+//@author Armandi & Lukasz
 
-/**
- *
- * @author CHU
- */
+public interface WordPairControlInterface {
 
-public interface WordPairControlInterface
-{
-    
     /**
      * Pre: Post: A new word pair is added to the existing collection of word
      * pairs. This method does not save to file!
@@ -16,7 +11,8 @@ public interface WordPairControlInterface
     void add(String question, String answer);
 
     /**
-     * Pre: Post: Returns the number of wordpairs in the collection (not the file).
+     * Pre: Post: Returns the number of wordpairs in the collection (not the
+     * file).
      */
     int size();
 
